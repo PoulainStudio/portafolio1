@@ -1,137 +1,51 @@
+// _layout.scss
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $fuente-cuerpo;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fuente-cuerpo; // Usamos la variable de _variables.scss
 }
 
-h1, h2, h3 {
-    font-family: $fuente-titulos;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url(../assets/descarga.jpg);
+  background-size: cover;
+  background-position: center;
+  color: $blanco;
 }
 
 body {
-    background-color: $color-fondo;
-    color: $color-principal;
-    line-height: 1.6;
-    overflow-x: hidden;
+  background-color: $color-fondo;
+  color: $color-principal;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* --- EL EFECTO DE BRILLO DORADO ARREGLADO --- */
 .brillo-dorado {
-    font-weight: 300;
-    display: inline-block;
-    
-    // Usamos la variable de SASS con $
-    background: linear-gradient(
-        110deg, 
-        $color-acento 0%, 
-        rgba(255, 255, 255, 0.8) 25%, 
-        $color-acento 50%
-    );
-    
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-
-    animation: pasarBrillo 4s linear infinite;
+  font-weight: 300;
+  display: inline-block;
+  background: linear-gradient(110deg, $color-acento 0%, rgba(255, 255, 255, 0.8) 25%, $color-acento 50%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pasarBrillo 4s linear infinite;
 }
-
-// Asegurate de que esto esté justo abajo o al final del archivo
-@keyframes pasarBrillo {
-    to {
-        background-position: 200% center;
-    }
-}
-
-.portfolio-container {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
-
-    h2 {
-        text-align: center;
-        margin-bottom: 50px;
-        font-size: 2rem;
-        position: relative;
-
-        &::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: $color-acento;
-            margin: 15px auto 0;
-        }
-    }
-}
-
-.proyectos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-/* === ANIMACIONES RECUPERADAS === */
 
 @keyframes pasarBrillo {
-    to {
-        background-position: 200% center;
-    }
-    
+  to { background-position: 200% center; }
 }
 
-/* El desvanecer hacia arriba */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* El latido del botón de WhatsApp */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.pulsacion {
-    animation: pulse 2s infinite; 
-}
-
-/* Clases para aplicar las animaciones */
-.fadeIn { animation: fadeInUp 1s ease forwards; }
-.fadeInSlow { animation: fadeInUp 1s ease 0.3s forwards; opacity: 0; }
-.fadeInCard { animation: fadeInUp 0.8s ease forwards; }
-.pulsacion { animation: pulse 2s infinite; }
-
-/* === FOOTER ARREGLADO === */
 footer {
-    text-align: center; // Esto lo centra
-    padding: 80px 20px;
-    background-color: $color-principal; // Usamos tu variable negra
-    color: $blanco;
-    margin-top: 80px;
-    width: 100%;
-
-    p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-    }
-}
-
-/* Y ya que estamos, pegamos el pulse del WhatsApp aquí también */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.pulsacion {
-    animation: pulse 2s infinite;
+  text-align: center;
+  padding: 80px 20px;
+  background-color: $color-principal;
+  color: $blanco;
+  margin-top: 80px;
+  width: 100%;
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +5,17 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: "Montserrat", sans-serif;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url(../assets/descarga.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
 }
 
 body {
@@ -17,7 +25,6 @@ body {
   overflow-x: hidden;
 }
 
-/* --- EL EFECTO DE BRILLO DORADO ARREGLADO --- */
 .brillo-dorado {
   font-weight: 300;
   display: inline-block;
@@ -34,84 +41,6 @@ body {
     background-position: 200% center;
   }
 }
-.portfolio-container {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-.portfolio-container h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 2rem;
-  position: relative;
-}
-.portfolio-container h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #c5a059;
-  margin: 15px auto 0;
-}
-
-.proyectos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-/* === ANIMACIONES RECUPERADAS === */
-@keyframes pasarBrillo {
-  to {
-    background-position: 200% center;
-  }
-}
-/* El desvanecer hacia arriba */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* El latido del botón de WhatsApp */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.pulsacion {
-  animation: pulse 2s infinite;
-}
-
-/* Clases para aplicar las animaciones */
-.fadeIn {
-  animation: fadeInUp 1s ease forwards;
-}
-
-.fadeInSlow {
-  animation: fadeInUp 1s ease 0.3s forwards;
-  opacity: 0;
-}
-
-.fadeInCard {
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-.pulsacion {
-  animation: pulse 2s infinite;
-}
-
-/* === FOOTER ARREGLADO === */
 footer {
   text-align: center;
   padding: 80px 20px;
@@ -120,26 +49,6 @@ footer {
   margin-top: 80px;
   width: 100%;
 }
-footer p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* Y ya que estamos, pegamos el pulse del WhatsApp aquí también */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.pulsacion {
-  animation: pulse 2s infinite;
-}
 
 .card {
   background: #ffffff;
@@ -147,7 +56,6 @@ footer p {
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
   opacity: 0;
 }
 .card:hover {
@@ -161,13 +69,6 @@ footer p {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card .card-info {
-  padding: 25px;
-}
-.card .card-info h3 {
-  margin-bottom: 10px;
-  color: #121212;
-}
 
 .btn {
   display: inline-block;
@@ -177,9 +78,7 @@ footer p {
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  font-size: 0.9rem;
-  transition: background 0.3s;
-  margin-top: 15px;
+  transition: 0.3s;
 }
 .btn:hover {
   background-color: #c5a059;
@@ -187,27 +86,18 @@ footer p {
 .btn-whatsapp {
   background: linear-gradient(to right, #25d366, #128c7e);
   padding: 15px 40px;
-  border-radius: 50px;
-  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+  margin-top: 50px;
+  animation: pulse 2s infinite;
 }
 
-.servicios {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 80px;
-  text-align: center;
-}
-.servicios .servicio-item {
-  flex: 1;
-  min-width: 250px;
-  padding: 30px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-.servicios .servicio-item h3 {
-  color: #c5a059;
-  margin-bottom: 10px;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=main.css.map */
