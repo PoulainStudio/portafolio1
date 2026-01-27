@@ -16,27 +16,31 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url(../assets/descarga.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: $blanco;
-    text-align: center;
-    padding: 120px 20px;
+/* --- EL EFECTO DE BRILLO DORADO ARREGLADO --- */
+.brillo-dorado {
+    font-weight: 300;
+    display: inline-block;
+    
+    // Usamos la variable de SASS con $
+    background: linear-gradient(
+        110deg, 
+        $color-acento 0%, 
+        rgba(255, 255, 255, 0.8) 25%, 
+        $color-acento 50%
+    );
+    
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 
-    h1 {
-        font-size: 3.5rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        font-weight: 700;
-    }
+    animation: pasarBrillo 4s linear infinite;
+}
 
-    p {
-        font-size: 1.2rem;
-        opacity: 0.8;
-        font-weight: 300;
+// Asegurate de que esto esté justo abajo o al final del archivo
+@keyframes pasarBrillo {
+    to {
+        background-position: 200% center;
     }
 }
 
@@ -70,11 +74,11 @@ header {
 
 /* === ANIMACIONES RECUPERADAS === */
 
-/* El brillo dorado que tanto te gustó */
 @keyframes pasarBrillo {
     to {
         background-position: 200% center;
     }
+    
 }
 
 /* El desvanecer hacia arriba */
@@ -96,8 +100,38 @@ header {
     100% { transform: scale(1); }
 }
 
+.pulsacion {
+    animation: pulse 2s infinite; 
+}
+
 /* Clases para aplicar las animaciones */
 .fadeIn { animation: fadeInUp 1s ease forwards; }
 .fadeInSlow { animation: fadeInUp 1s ease 0.3s forwards; opacity: 0; }
 .fadeInCard { animation: fadeInUp 0.8s ease forwards; }
 .pulsacion { animation: pulse 2s infinite; }
+
+/* === FOOTER ARREGLADO === */
+footer {
+    text-align: center; // Esto lo centra
+    padding: 80px 20px;
+    background-color: $color-principal; // Usamos tu variable negra
+    color: $blanco;
+    margin-top: 80px;
+    width: 100%;
+
+    p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+}
+
+/* Y ya que estamos, pegamos el pulse del WhatsApp aquí también */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulsacion {
+    animation: pulse 2s infinite;
+}

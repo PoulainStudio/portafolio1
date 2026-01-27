@@ -17,28 +17,23 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url(../assets/descarga.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #ffffff;
-  text-align: center;
-  padding: 120px 20px;
-}
-header h1 {
-  font-size: 3.5rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-header p {
-  font-size: 1.2rem;
-  opacity: 0.8;
+/* --- EL EFECTO DE BRILLO DORADO ARREGLADO --- */
+.brillo-dorado {
   font-weight: 300;
+  display: inline-block;
+  background: linear-gradient(110deg, #c5a059 0%, rgba(255, 255, 255, 0.8) 25%, #c5a059 50%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pasarBrillo 4s linear infinite;
 }
 
+@keyframes pasarBrillo {
+  to {
+    background-position: 200% center;
+  }
+}
 .portfolio-container {
   max-width: 1100px;
   margin: 60px auto;
@@ -66,7 +61,6 @@ header p {
 }
 
 /* === ANIMACIONES RECUPERADAS === */
-/* El brillo dorado que tanto te gustó */
 @keyframes pasarBrillo {
   to {
     background-position: 200% center;
@@ -95,6 +89,10 @@ header p {
     transform: scale(1);
   }
 }
+.pulsacion {
+  animation: pulse 2s infinite;
+}
+
 /* Clases para aplicar las animaciones */
 .fadeIn {
   animation: fadeInUp 1s ease forwards;
@@ -109,6 +107,36 @@ header p {
   animation: fadeInUp 0.8s ease forwards;
 }
 
+.pulsacion {
+  animation: pulse 2s infinite;
+}
+
+/* === FOOTER ARREGLADO === */
+footer {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #121212;
+  color: #ffffff;
+  margin-top: 80px;
+  width: 100%;
+}
+footer p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Y ya que estamos, pegamos el pulse del WhatsApp aquí también */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .pulsacion {
   animation: pulse 2s infinite;
 }
