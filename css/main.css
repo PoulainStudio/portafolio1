@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -60,31 +61,80 @@ footer {
   width: 100%;
 }
 
+.servicios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.servicios .servicio-item {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  padding: 20px;
+}
+.servicios .servicio-item .icono {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  display: block;
+}
+.servicios .servicio-item h3 {
+  color: #c5a059;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.servicios .servicio-item p {
+  font-size: 1.1rem;
+  color: #454545;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* --- ALINEACIÓN DE CARDS --- */
 .proyectos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  /* En tablets que baje a 2 columnas */
+  /* En celulares que sea 1 sola columna */
+}
+@media (max-width: 1024px) {
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
-  border-color: #c5a059;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .card img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.card .card-info {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .btn-whatsapp {

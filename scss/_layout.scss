@@ -58,3 +58,48 @@ footer {
     margin-top: 80px;
     width: 100%;
 }
+
+// --- ESTILOS PARA LA SECCIÓN DE SERVICIOS ---
+
+.servicios {
+    display: flex;             // Activa el modo flexible
+    justify-content: center;   // Centra los items horizontalmente
+    flex-wrap: wrap;           // Si la pantalla es chica, los baja uno tras otro
+    gap: 30px;                 // Espacio de separación entre los 3 servicios
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;            // Centra toda la sección en la pantalla
+
+    .servicio-item {
+        flex: 1;               // Hace que todos midan lo mismo
+        min-width: 280px;      // Evita que se aplasten en celulares
+        text-align: center;    // Centra el emoji, título y párrafo
+        padding: 20px;
+
+        .icono {
+            font-size: 3.5rem; // Agranda el emoji para que destaque
+            margin-bottom: 15px;
+            display: block;    // Asegura que ocupe su propia línea
+        }
+
+        h3 {
+            color: $color-acento; // Usa el dorado de tus variables
+            margin-bottom: 15px;
+            font-family: $fuente-titulos;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: lighten($color-principal, 20%); // Un gris más suave
+        }
+    }
+}
+
+// --- AJUSTE PARA EL FOOTER ---
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
