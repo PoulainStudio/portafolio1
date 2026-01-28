@@ -22,21 +22,55 @@
 .card {
     display: flex;
     flex-direction: column;
-    height: 100%; // Para que todas midan lo mismo de alto
+    height: 100%;
+    background: #ffffff; // Fondo blanco para que resalte la sombra
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.1); // Un borde finito
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); // Sombra suave
+    transition: all 0.3s ease; // Esto hace que el movimiento sea suave
+
+    &:hover {
+        transform: translateY(-10px); // Se levanta al pasar el mouse
+        box-shadow: 0 20px 40px rgba(197, 160, 89, 0.2); // Sombra dorada
+        border-color: #c5a059; // El borde se pone dorado
+    }
 
     img {
         width: 100%;
         height: 220px;
-        object-fit: cover; // Evita que la foto se estire
+        object-fit: cover;
     }
 
     .card-info {
-        padding: 20px;
+        padding: 25px;
         text-align: center;
-        flex-grow: 1; // Empuja el contenido para que los botones se alineen
+        flex-grow: 1;
+
+        h3 {
+            margin-bottom: 15px;
+            color: #121212;
+        }
+
+        /* Estilo para el botón "Ver Proyecto" */
+        .btn-proyecto {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid #c5a059;
+            color: #c5a059;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #c5a059;
+                color: white; // Se invierte el color al pasar el mouse
+            }
+        }
     }
 }
-
 
 .btn-whatsapp {
     display: inline-block;
