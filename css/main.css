@@ -156,6 +156,7 @@ footer {
   text-align: center;
   flex-grow: 1;
   /* Estilo para el botón "Ver Proyecto" */
+  /* Estilo final del botón Ver Proyecto */
 }
 .card .card-info h3 {
   margin-bottom: 15px;
@@ -163,18 +164,21 @@ footer {
 }
 .card .card-info .btn-proyecto {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: transparent;
-  border: 2px solid #c5a059;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #ffffff;
   color: #c5a059;
+  border: 2px solid #c5a059;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 .card .card-info .btn-proyecto:hover {
   background-color: #c5a059;
-  color: white;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
 }
 
 .btn-whatsapp {

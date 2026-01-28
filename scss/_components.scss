@@ -53,22 +53,26 @@
         }
 
         /* Estilo para el botón "Ver Proyecto" */
+        /* Estilo final del botón Ver Proyecto */
         .btn-proyecto {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: transparent;
-            border: 2px solid #c5a059;
-            color: #c5a059;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
+        display: inline-block;
+         margin-top: 15px;
+        padding: 12px 25px;
+        background-color: #ffffff; // Empieza blanco
+         color: #c5a059;           // Letra dorada
+         border: 2px solid #c5a059; // Borde dorado
+         text-decoration: none;
+     border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s ease; // Para que el cambio no sea brusco
 
-            &:hover {
-                background-color: #c5a059;
-                color: white; // Se invierte el color al pasar el mouse
-            }
-        }
+    &:hover {
+        background-color: #c5a059; // Se pone dorado
+        color: #ffffff;           // La letra pasa a blanca
+        transform: scale(1.1);    // Se agranda un poquito (10%)
+        box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4); // Brillo dorado abajo
+    }
+    }
     }
 }
 
