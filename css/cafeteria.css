@@ -1,0 +1,79 @@
+/* --- Mixins para ahorrar tiempo --- */
+/* --- Estilos con Anidamiento (Nesting) --- */
+body {
+  background-color: #fdfaf5;
+  color: #332a24;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-cafeteria {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.nav-cafeteria ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+.nav-cafeteria ul a {
+  text-decoration: none;
+  color: #332a24;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-cafeteria ul a:hover {
+  color: #6f4e37;
+}
+.nav-cafeteria .btn-carta-nav {
+  background: #6f4e37;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.nav-cafeteria .btn-carta-nav:hover {
+  background: rgb(145.1024096386, 101.9638554217, 71.8975903614);
+}
+
+.header-cafeteria {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.header-cafeteria h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+}
+
+.carta-menu {
+  padding: 60px 20px;
+  text-align: center;
+}
+.carta-menu .menu-grid {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+.carta-menu .menu-grid .menu-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #6f4e37;
+  padding: 10px 0;
+}
+.carta-menu .menu-grid .menu-item .precio {
+  font-weight: bold;
+  color: #6f4e37;
+}/*# sourceMappingURL=cafeteria.css.map */
