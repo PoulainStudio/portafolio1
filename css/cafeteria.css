@@ -1,5 +1,6 @@
+@charset "UTF-8";
 /* --- VARIABLES --- */
-/* --- ESTILOS ACTUALIZADOS --- */
+/* --- ESTILOS GENERALES --- */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -7,6 +8,7 @@ body {
   color: #1b1b1b;
 }
 
+/* --- NAVEGACIÓN --- */
 .nav-cafeteria {
   display: flex;
   justify-content: space-between;
@@ -44,6 +46,7 @@ body {
   transform: scale(1.05);
 }
 
+/* --- HERO (INICIO) --- */
 .hero-cafe {
   height: 60vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1200");
@@ -61,6 +64,7 @@ body {
   margin: 0;
 }
 
+/* --- HISTORIA --- */
 .seccion-historia {
   padding: 100px 10%;
 }
@@ -87,7 +91,6 @@ body {
 .seccion-historia .contenido-historia .texto p {
   font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 20px;
   color: #444;
 }
 .seccion-historia .contenido-historia .foto-historia img {
@@ -99,6 +102,51 @@ body {
   box-shadow: 15px 15px 0 #c5a059;
 }
 
+/* --- CARTA --- */
+.seccion-carta {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: white;
+}
+.seccion-carta h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.seccion-carta .subtitulo-carta {
+  color: #c5a059;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.seccion-carta .categoria-menu {
+  margin-bottom: 60px;
+}
+.seccion-carta .categoria-menu h2 {
+  font-family: "Playfair Display", serif;
+  border-bottom: 2px solid #c5a059;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+}
+.seccion-carta .categoria-menu .grid-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.seccion-carta .categoria-menu .grid-menu .item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 5px;
+}
+.seccion-carta .categoria-menu .grid-menu .item span:last-child {
+  font-weight: bold;
+  color: #c5a059;
+}
+
 footer {
   text-align: center;
   padding: 60px;
@@ -106,14 +154,11 @@ footer {
   color: white;
 }
 
-/* Responsivo para celulares */
+/* --- RESPONSIVO --- */
 @media (max-width: 768px) {
-  .seccion-historia .contenido-historia {
+  .seccion-historia .contenido-historia,
+  .seccion-carta .categoria-menu .grid-menu {
     grid-template-columns: 1fr;
-    gap: 30px;
-    direction: ltr !important;
-  }
-  .seccion-historia .contenido-historia .texto {
     direction: ltr !important;
   }
 }/*# sourceMappingURL=cafeteria.css.map */

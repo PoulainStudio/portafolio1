@@ -3,7 +3,7 @@ $dorado-cafe: #c5a059;
 $oscuro: #1b1b1b;
 $crema: #fdfaf5;
 
-/* --- ESTILOS ACTUALIZADOS --- */
+/* --- ESTILOS GENERALES --- */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -11,6 +11,7 @@ body {
     color: $oscuro;
 }
 
+/* --- NAVEGACIÓN --- */
 .nav-cafeteria {
     display: flex;
     justify-content: space-between;
@@ -45,6 +46,7 @@ body {
     }
 }
 
+/* --- HERO (INICIO) --- */
 .hero-cafe {
     height: 60vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
@@ -64,6 +66,7 @@ body {
     }
 }
 
+/* --- HISTORIA --- */
 .seccion-historia {
     padding: 100px 10%;
     
@@ -80,7 +83,7 @@ body {
         grid-template-columns: 1fr 1fr;
         gap: 80px;
         align-items: center;
-        margin-bottom: 100px; // Espacio entre generaciones
+        margin-bottom: 100px;
 
         .texto {
             h3 {
@@ -89,12 +92,7 @@ body {
                 color: $dorado-cafe;
                 margin-bottom: 20px;
             }
-            p {
-                font-size: 1.1rem;
-                line-height: 1.8;
-                margin-bottom: 20px;
-                color: #444;
-            }
+            p { font-size: 1.1rem; line-height: 1.8; color: #444; }
         }
 
         .foto-historia img {
@@ -107,6 +105,44 @@ body {
     }
 }
 
+/* --- CARTA --- */
+.seccion-carta {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: white; // Para diferenciar de la home
+
+    h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
+    .subtitulo-carta { color: $dorado-cafe; font-weight: 600; margin-bottom: 50px; }
+
+    .categoria-menu {
+        margin-bottom: 60px;
+        h2 { 
+            font-family: 'Playfair Display', serif; 
+            border-bottom: 2px solid $dorado-cafe;
+            display: inline-block;
+            margin-bottom: 30px;
+            padding-bottom: 5px;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+
+            .item {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+                padding-bottom: 5px;
+                span:last-child { font-weight: bold; color: $dorado-cafe; }
+            }
+        }
+    }
+}
+
 footer {
     text-align: center;
     padding: 60px;
@@ -114,13 +150,11 @@ footer {
     color: white;
 }
 
-/* Responsivo para celulares */
+/* --- RESPONSIVO --- */
 @media (max-width: 768px) {
-    .seccion-historia .contenido-historia {
+    .seccion-historia .contenido-historia,
+    .seccion-carta .categoria-menu .grid-menu {
         grid-template-columns: 1fr;
-        gap: 30px;
-        direction: ltr !important; // Desactiva el modo espejo en celular
-        
-        .texto { direction: ltr !important; }
+        direction: ltr !important;
     }
 }
