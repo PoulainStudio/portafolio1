@@ -114,7 +114,7 @@ footer {
 }
 .intro-valor h3 {
   text-align: center;
-  color: #c5a059;
+  color: #121212;
   font-family: "Cinzel", serif;
   font-size: 2.2rem;
   margin-bottom: 30px;
@@ -125,11 +125,11 @@ footer {
   text-align: left;
   font-size: 1.3rem;
   line-height: 1.8;
-  color: #e0e0e0;
+  color: #121212;
   font-family: "Montserrat", sans-serif;
 }
 .intro-valor p strong {
-  color: #fff;
+  color: #f8de88;
   font-weight: 700;
 }
 @media (max-width: 768px) {
@@ -248,27 +248,3 @@ footer {
 .fadeIn {
   animation: fadeInUp 1s ease forwards;
 }/*# sourceMappingURL=main.css.map */
-
-/* --- ESTILO DE EMERGENCIA PARA EL TEXTO --- */
-.intro-valor {
-    max-width: 900px;
-    margin: 50px auto 80px auto;
-    padding: 0 20px;
-    text-align: center; /* Centra el bloque entero */
-}
-
-.intro-valor h3 {
-    text-align: center !important;
-    color: #c5a059 !important;
-    font-size: 2.2rem !important;
-    margin-bottom: 25px !important;
-    font-family: 'Cinzel', serif;
-}
-
-.intro-valor p {
-    text-align: left !important;
-    font-size: 1.35rem !important;
-    line-height: 1.8 !important;
-    color: #e0e0e0 !important;
-    font-family: 'Montserrat', sans-serif;
-}
