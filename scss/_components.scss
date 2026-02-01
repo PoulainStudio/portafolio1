@@ -1,19 +1,19 @@
 /* --- ALINEACIÓN DE CARDS --- */
 .proyectos-grid {
     display: grid;
-    // Esto obliga a que sean 3 columnas si hay espacio, o menos en celular
+    
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; // Espacio entre cards
-    max-width: 1200px; // Ancho máximo de la sección
-    margin: 40px auto; // Centra la grilla completa
+    gap: 30px;
+    max-width: 1200px; 
+    margin: 40px auto; 
     padding: 0 20px;
 
-    /* En tablets que baje a 2 columnas */
+   
     @media (max-width: 1024px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* En celulares que sea 1 sola columna */
+    
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
     }
@@ -23,13 +23,12 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background: #ffffff; // Fondo blanco para que resalte la sombra
+    background: #ffffff; 
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.1); // Un borde finito
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); // Sombra suave
-    transition: all 0.3s ease; // Esto hace que el movimiento sea suave
-
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; 
     &:hover {
         transform: translateY(-10px); // Se levanta al pasar el mouse
         box-shadow: 0 20px 40px rgba(197, 160, 89, 0.2); // Sombra dorada
@@ -52,8 +51,6 @@
             color: #121212;
         }
 
-        /* Estilo para el botón "Ver Proyecto" */
-        /* Estilo final del botón Ver Proyecto */
         .btn-proyecto {
         display: inline-block;
          margin-top: 15px;

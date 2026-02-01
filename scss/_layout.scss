@@ -114,3 +114,29 @@ footer {
         letter-spacing: 2px;
     }
 }
+
+/* Estilos para el texto de ventas */
+.seccion-intro-valor {
+    max-width: 900px;           
+    margin: 0 auto 60px auto;   
+    text-align: center;        
+    padding: 0 20px;            
+
+    h3 {
+        color: #c5a059;        
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-family: 'Cinzel', serif; 
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.8;       
+        color: #ccc;            
+        margin-bottom: 20px;
+        
+        strong {
+            color: #fff;        // Resalta las palabras clave en blanco
+        }
+    }
+}
