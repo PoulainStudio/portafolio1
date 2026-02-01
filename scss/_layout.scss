@@ -115,28 +115,39 @@ footer {
     }
 }
 
-/* Estilos para el texto de ventas */
-.seccion-intro-valor {
+.intro-valor {
     max-width: 900px;           
-    margin: 0 auto 60px auto;   
-    text-align: center;        
-    padding: 0 20px;            
+    margin: 40px auto 80px auto; // Margen arriba y abajo para separar
+    padding: 0 20px;
 
+    // Estilos del TÍTULO (Centrado y Grande)
     h3 {
-        color: #c5a059;        
-        font-size: 2rem;
-        margin-bottom: 20px;
+        text-align: center;      // Título centrado
+        color: #c5a059;          // Tu color dorado
         font-family: 'Cinzel', serif; 
+        font-size: 2.2rem;       // Título bien grande
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
+    // Estilos del TEXTO (Alineado a la izquierda y Grande)
     p {
-        font-size: 1.1rem;
-        line-height: 1.8;       
-        color: #ccc;            
-        margin-bottom: 20px;
+        text-align: left;        // Alineado a la izquierda para mejor lectura
+        font-size: 1.3rem;       // Letra mucho más grande
+        line-height: 1.8;        // Espacio entre renglones
+        color: #e0e0e0;          // Color claro casi blanco
+        font-family: 'Montserrat', sans-serif;
         
         strong {
-            color: #fff;        // Resalta las palabras clave en blanco
+            color: #fff;
+            font-weight: 700;
         }
+    }
+
+    // Ajuste para celular (para que no ocupe tanto)
+    @media (max-width: 768px) {
+        h3 { font-size: 1.8rem; }
+        p { font-size: 1.1rem; text-align: left; }
     }
 }
