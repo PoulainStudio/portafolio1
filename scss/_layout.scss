@@ -151,3 +151,24 @@ footer {
         p { font-size: 1.1rem; text-align: left; }
     }
 }
+
+// Ejemplo de mixin para animaciones rápidas
+@mixin transicion {
+  transition: all 0.3s ease-in-out;
+}
+
+.card {
+  @include transicion;
+  &:hover {
+    transform: translateY(-10px); // Hace que la tarjeta "flote" al pasar el mouse
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+}
+
+.btn-proyecto, .btn-primary {
+  @include transicion;
+  &:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
+}
