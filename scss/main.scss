@@ -1,41 +1,43 @@
 @import 'variables';
 @import 'layout';
 @import 'components';
-html, body {
-    height: 100%;
+
+// Reset global para evitar espacios en blanco
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; // Esto evita que la página se mueva hacia los costados
+    box-sizing: border-box;
 }
 
-footer {
-    margin-bottom: 0 !important;
-    padding-bottom: 20px;
-}
-.navbar {
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+html {
+    background-color: #121212; // Evita que se vea blanco si el body se achica
 }
 
-.nav-link {
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff !important;
-    margin-left: 20px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition: 0.3s;
-
-    &:hover {
-        color: #c5a059 !important; // El dorado de tu marca
-    }
-}
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; // Obliga al cuerpo a ser tan alto como la pantalla
-    background-color: #121212; // Color oscuro para que no haya contraste blanco
+    min-height: 100vh;
+    margin: 0;
+    background-color: #121212 !important; 
+    color: white;
+    overflow-x: hidden;
 }
 
 main {
-    flex: 1; // Hace que el contenido principal ocupe todo el espacio sobrante
+    flex: 1 0 auto; // Esto obliga al main a estirarse y empujar al footer al fondo
+    width: 100%;
+}
+
+footer {
+    flex-shrink: 0; // Evita que el footer se aplaste
+    margin-top: auto;
+    background-color: #000000; // Asegúrate de que sea negro o el color oscuro de tu marca
+    padding: 20px 0;
+    width: 100%;
+}
+
+// Esto quita márgenes raros que Bootstrap le pone a las hileras de proyectos
+.row {
+    margin-right: 0;
+    margin-left: 0;
 }
