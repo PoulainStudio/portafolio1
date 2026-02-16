@@ -1,3 +1,41 @@
 @import 'variables';
 @import 'layout';
 @import 'components';
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; // Esto evita que la página se mueva hacia los costados
+}
+
+footer {
+    margin-bottom: 0 !important;
+    padding-bottom: 20px;
+}
+.navbar {
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff !important;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+
+    &:hover {
+        color: #c5a059 !important; // El dorado de tu marca
+    }
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Obliga al cuerpo a ser tan alto como la pantalla
+    background-color: #121212; // Color oscuro para que no haya contraste blanco
+}
+
+main {
+    flex: 1; // Hace que el contenido principal ocupe todo el espacio sobrante
+}
