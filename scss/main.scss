@@ -163,3 +163,21 @@ p, span, label, .form-label {
     color: #999 !important;
     cursor: not-allowed;
 }
+
+/* --- SECCIÓN DE RELLENO EN SERVICIOS --- */
+.detalles-servicios {
+    background: rgba(255, 255, 255, 0.02); // Un fondo apenas visible para romper el negro total
+    border-top: 1px solid #333;
+    padding: 60px 20px;
+    border-radius: 20px;
+    
+    h5 {
+        font-family: 'Playfair Display', serif !important;
+        margin-top: 20px;
+    }
+    
+    p {
+        font-size: 0.95rem;
+        opacity: 0.8;
+    }
+}
