@@ -2,7 +2,7 @@
 @import 'layout';
 @import 'components';
 
-// Reset global para evitar espacios en blanco
+// Reset global
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@
 }
 
 html {
-    background-color: #121212; // Evita que se vea blanco si el body se achica
+    background-color: #121212;
 }
 
 body {
@@ -19,25 +19,63 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: #121212 !important; 
-    color: white;
+    color: #ffffff !important;
     overflow-x: hidden;
 }
 
 main {
-    flex: 1 0 auto; // Esto obliga al main a estirarse y empujar al footer al fondo
+    flex: 1 0 auto;
     width: 100%;
 }
 
 footer {
-    flex-shrink: 0; // Evita que el footer se aplaste
+    flex-shrink: 0;
     margin-top: auto;
-    background-color: #000000; // Asegúrate de que sea negro o el color oscuro de tu marca
+    background-color: #000000 !important;
     padding: 20px 0;
     width: 100%;
 }
 
-// Esto quita márgenes raros que Bootstrap le pone a las hileras de proyectos
-.row {
-    margin-right: 0;
-    margin-left: 0;
+// Estilo unificado para imágenes con animación
+.image-fade {
+    opacity: 0;
+    animation: aparecer 1.5s ease forwards;
+    border: 2px solid #c5a059;
+    padding: 10px;
+    background-color: #1a1a1a;
+    transition: all 0.5s ease;
+
+    &:hover {
+        border-color: white;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- FIX DE NAVBAR Y TEXTOS --- */
+.navbar {
+    background-color: #000000 !important;
+    min-height: 80px;
+}
+
+.nav-link {
+    color: #ffffff !important; 
+    font-size: 1rem !important;
+    font-family: 'Montserrat', sans-serif !important;
+    
+    &:hover {
+        color: #c5a059 !important;
+    }
+}
+
+p, span, label, .form-label {
+    color: #ffffff !important;
+}
+
+h1, h2, h3, .brillo-dorado {
+    color: #c5a059 !important;
 }
