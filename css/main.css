@@ -328,6 +328,7 @@ footer {
 
 html {
   background-color: #121212;
+  overflow-y: scroll;
 }
 
 body {
@@ -376,12 +377,7 @@ footer {
     transform: translateY(0);
   }
 }
-/* --- FIX TOTAL DE ESTRUCTURA Y NAVBAR --- */
-html {
-  background-color: #121212;
-  overflow-y: scroll;
-}
-
+/* --- NAVBAR FIX --- */
 .navbar {
   background-color: #000000 !important;
   min-height: 90px !important;
@@ -414,8 +410,9 @@ html {
   color: #c5a059 !important;
 }
 
-/* --- CONTROL DE TIPOGRAFÍAS Y COLORES --- */
-h1, h2, h3, .brillo-dorado {
+/* --- TIPOGRAFÍAS PREMIUM --- */
+h1, h2, h3, h4, h5, .navbar-brand, .brillo-dorado {
+  font-family: "Playfair Display", serif !important;
   color: #c5a059 !important;
 }
 
@@ -424,4 +421,60 @@ p, span, label, .form-label {
   color: #ffffff !important;
   line-height: 1.6;
   font-weight: 300;
+}
+
+.intro-valor h3 {
+  font-size: 2.5rem !important;
+}
+
+/* --- TARJETAS PREMIUM (PROYECTOS Y SERVICIOS) --- */
+.card, .card-servicio {
+  background-color: #1a1a1a !important;
+  border: 1px solid #333 !important;
+  border-radius: 10px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+.card:hover, .card-servicio:hover {
+  transform: translateY(-10px);
+  border-color: #c5a059 !important;
+  box-shadow: 0 15px 35px rgba(197, 160, 89, 0.2) !important;
+}
+.card .card-img-top, .card-servicio .card-img-top {
+  height: 200px !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  margin-bottom: 15px;
+}
+.card h3, .card h5, .card-servicio h3, .card-servicio h5 {
+  margin-bottom: 15px;
+}
+
+/* --- BOTONES PREMIUM (DORADOS Y TRANSPARENTES) --- */
+.btn-proyecto, .btn-primary {
+  display: inline-block;
+  margin-top: 15px !important;
+  background-color: transparent !important;
+  border: 2px solid #c5a059 !important;
+  color: #c5a059 !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.btn-proyecto:hover, .btn-primary:hover {
+  background-color: #c5a059 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid #666 !important;
+  color: #999 !important;
+  cursor: not-allowed;
 }/*# sourceMappingURL=main.css.map */
