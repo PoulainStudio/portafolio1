@@ -392,8 +392,9 @@ footer {
 
 
 /* --- TIPOGRAFÍAS PREMIUM --- */
-.font-didot {
-  font-family: 'Modern Didot','Bodoni Moda', serif !important;
+.font-didot, h1.font-didot, h2.font-didot, h3.font-didot, h4.font-didot, h5.font-didot, .navbar-brand.font-didot {
+  font-family: 'Modern Didot','Didot','Bodoni Moda', serif !important;
+}
 
 h1, h2, h3, h4, h5, .navbar-brand, .brillo-dorado {
   font-family: "Playfair Display", serif !important;
