@@ -397,6 +397,10 @@ footer {
   color: inherit !important;
 }
 
+.color-dorado {
+  color: #c5a059 !important;
+}
+
 h1, h2, h3, h4, h5, .navbar-brand, .brillo-dorado {
   font-family: "Playfair Display", serif !important;
   color: #c5a059 !important;
