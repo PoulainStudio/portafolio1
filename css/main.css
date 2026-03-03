@@ -164,7 +164,25 @@ footer {
 .btn-proyecto, .btn-primary {
   transition: all 0.3s ease-in-out;
 }
-.btn-proyecto:hover, .btn-primary:hover {
+/* base style for project buttons and calls-to-action */
+.btn-proyecto {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: transparent;
+  color: #c5a059;
+  border: 2px solid #c5a059;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn-proyecto:hover {
+  background-color: #c5a059;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+}
+.btn-primary:hover, .btn-proyecto:hover {
   filter: brightness(1.2);
   transform: scale(1.05);
 }
@@ -375,8 +393,7 @@ footer {
 
 /* --- TIPOGRAFÍAS PREMIUM --- */
 .font-didot {
-  font-family: 'Bodoni Moda', serif !important;
-}
+  font-family: 'Modern Didot','Bodoni Moda', serif !important;
 
 h1, h2, h3, h4, h5, .navbar-brand, .brillo-dorado {
   font-family: "Playfair Display", serif !important;
