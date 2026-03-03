@@ -17,7 +17,7 @@
     
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand font-didot" href="index.html">
             <span class="brillo-dorado">POULAIN </span> STUDIO
         </a>
         
@@ -38,11 +38,11 @@
 </nav>
 
 <main class="container my-5 flex-grow-1">
-    <h1 class="text-center mb-5 brillo-dorado">Contacto</h1>
+    <h1 class="text-center mb-5 brillo-dorado font-didot">Contacto</h1>
 
     <div class="row g-5 align-items-center">
         <div class="col-lg-5">
-            <h2 class="h4 brillo-dorado mb-4">¡Trabajemos juntos!</h2>
+            <h2 class="h4 brillo-dorado mb-4 font-didot">¡Trabajemos juntos!</h2>
             <p>Estamos en Buenos Aires, Argentina, pero nuestra oficina es el mundo. Escribinos para empezar a darle forma a tu proyecto.</p>
             
             <div class="info-contacto mt-4">
@@ -60,7 +60,8 @@
 
         <div class="col-lg-7">
             <div class="p-4 rounded shadow border border-warning" style="background-color: #1a1a1a;">
-                <form class="row g-3">
+                <form id="contactForm" class="row g-3">
+                    <!-- validate profanity on submit -->
                     <div class="col-md-6">
                         <label class="form-label">Nombre</label>
                         <input type="text" class="form-control" placeholder="Tu nombre" required>
@@ -78,6 +79,7 @@
                             Enviar Mensaje
                         </button>
                     </div>
+                    <div id="errorMsg" class="text-danger mt-2"></div>
                 </form>
             </div>
         </div>
@@ -90,5 +92,46 @@
         <p>© 2026 Poulain Studio</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// profanity filter for contact form
+(function(){
+    const bannedList = [
+        "hijodeputa","hijodemilputas","laconchadetumadre","laconchadetus hermana".replace(/\s+/g,'').toLowerCase(),
+        "malparido","pedazodemierda","basurahumana","sorete","forro","reverendopelotudo","conchudo",
+        "pajero","degenerado","pervertido","enfermodemierda","puto","maricon","subnormal","mongolico","retrasado",
+        "chupapijas","chupavergas","tragasemen","prostituta","puta","gato","pendeja","trola","atorrante","lacra",
+        "mierda","pelotudo","boludo","idiota","imbecil","estupido","tarado","inutil","fracasado","asqueroso",
+        "desagradable","ridiculo","payaso","muertodehambre","rata","chupamedias","cagon","cagada","cagaste","cagarte",
+        "culoroto","orto","ojete","culo","concha","verga","pija","poronga","chota","pene","pito","polla","miembro",
+        "vagina","teta","tetas","pezon","garchar","coger","cogerte","follar","culiar","masturbar","paja","semen","leche",
+        "cornudo","cornuda","nabo","salame","bobo","tonto","pesado","rompebolas","fastidioso","gil","gilastrun","fantasma",
+        "careta","cabeza de termo".replace(/\s+/g,''),"imbancable","infeliz","aparato","perejil","mamerto"
+    ];
+
+    // normalize banned words (remove non letters)
+    const banned = bannedList.map(w => w.replace(/[^a-záéíóúüñ]/g, ''));
+
+    function checkText(text){
+        const cleaned = text.toLowerCase().replace(/[^a-záéíóúüñ]/g,'');
+        for(let word of banned){
+            if(word && cleaned.includes(word)) return word;
+        }
+        return null;
+    }
+
+    const form = document.getElementById('contactForm');
+    const errorDiv = document.getElementById('errorMsg');
+    form.addEventListener('submit', function(e){
+        errorDiv.textContent = '';
+        const msg = this.querySelector('textarea').value || '';
+        const found = checkText(msg);
+        if(found){
+            e.preventDefault();
+            errorDiv.innerHTML = 'No se puede enviar el mensaje porque contiene la palabra <span class="prohibido">' + found + '</span>.';
+        }
+    });
+})();
+</script>
 </body>
 </html>
